@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html>
   <head>
     <meta charset="utf-8" />
     <title>Challenge Alura</title>
@@ -14,18 +14,33 @@
     />
   </head>
 
-  <header>
-    <img class="logo" src="recursos/Logo.png" alt="Logo del Challenge" />
-  </header>
-
   <body>
-    <form>
-      <input
-        type="text"
-        id="mensaje-encriptar"
-        class="mensaje"
-        placeholder="Ingrese el texto aqui"
-      />
-    </form>
+    <main>
+      <div class="encriptador">
+        <img class="logo" src="recursos/Logo.png" alt="Logo del Challenge" />
+        <form>
+          <input
+            type="text"
+            id="mensaje-encriptar"
+            class="mensaje"
+            placeholder="Ingrese el texto aqui"
+          />
+          <p>
+            <img src="recursos/Group.png" alt="exclamacion" /> Solo letras
+            minusculas
+          </p>
+          <input type="submit" value="Encriptar" class="encriptar" />
+          <input type="button" value="Desencriptar" class="desencriptar" />
+        </form>
+      </div>
+      <div class="tablon">
+        <img src="recursos/Muñeco.png" alt="imagen del Muñeco" />
+        <p>Ningun mensaje fue encontrado</p>
+        <p>ingesa el texto que deseas encriptar o desencriptar</p>
+      </div>
+    </main>
+    <footer>
+      <p>sebastian</p>
+    </footer>
   </body>
 </html>
