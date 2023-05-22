@@ -19,28 +19,44 @@
       <div class="encriptador">
         <img class="logo" src="recursos/Logo.png" alt="Logo del Challenge" />
         <form>
-          <input
-            type="text"
-            id="mensaje-encriptar"
-            class="mensaje"
-            placeholder="Ingrese el texto aqui"
-          />
-          <p>
+          <textarea
+            name="mensaje"
+            id="mensaje"
+            cols="30"
+            rows="10"
+            placeholder="ingrese el texto aqui"
+          ></textarea>
+          <p class="aviso">
             <img src="recursos/Group.png" alt="exclamacion" /> Solo letras
-            minusculas
+            minusculas y sin acentos
           </p>
-          <input type="submit" value="Encriptar" class="encriptar" />
-          <input type="button" value="Desencriptar" class="desencriptar" />
+          <div class="botones">
+            <button class="encriptar">Encriptar</button>
+            <button class="desencriptar">Desencriptar</button>
+          </div>
         </form>
       </div>
       <div class="tablon">
-        <img src="recursos/Muñeco.png" alt="imagen del Muñeco" />
-        <p>Ningun mensaje fue encontrado</p>
-        <p>ingesa el texto que deseas encriptar o desencriptar</p>
+        <div class="text">
+          <img src="recursos/Muñeco.png" alt="imagen del Muñeco" />
+          <p class="titulo">Ningún mensaje fue encontrado</p>
+          <p class="subtitulo">
+            ingesa el texto que deseas encriptar o desencriptar
+          </p>
+        </div>
+        <div class="notext">
+          <textarea
+            name="tablonmensajes"
+            id="tablonmensajes"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button class="botoncopiar">Copiar</button>
+        </div>
       </div>
     </main>
     <footer>
-      <p>sebastian</p>
+      <p>Encriptador de Sebas</p>
     </footer>
   </body>
 </html>
