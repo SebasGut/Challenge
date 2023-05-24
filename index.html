@@ -16,9 +16,11 @@
 
   <body>
     <main>
+      <!--Box del encriptador-->
       <div class="encriptador">
         <img class="logo" src="recursos/Logo.png" alt="Logo del Challenge" />
         <form>
+          <!--Zona donde escribiremos el mensaje-->
           <textarea
             name="mensaje"
             id="mensaje"
@@ -26,37 +28,86 @@
             rows="10"
             placeholder="ingrese el texto aqui"
           ></textarea>
+          <!--Aviso aclarando que solo se puede usar minusculas-->
           <p class="aviso">
             <img src="recursos/Group.png" alt="exclamacion" /> Solo letras
             minusculas y sin acentos
           </p>
+          <!--Conjunto de botones-->
           <div class="botones">
-            <button class="encriptar">Encriptar</button>
-            <button class="desencriptar">Desencriptar</button>
+            <!--Boton para encriptar-->
+            <button
+              class="encriptar"
+              type="button"
+              onclick="encriptarMensaje()"
+            >
+              Encriptar
+            </button>
+            <!--Boton para desencriptar-->
+            <button
+              class="desencriptar"
+              type="button"
+              onclick="desencriptarMensaje()"
+            >
+              Desencriptar
+            </button>
           </div>
         </form>
       </div>
+      <!--Tablon donde se mostraran los mensajes-->
       <div class="tablon">
-        <div class="text">
+        <!--Elementos visibles cuando no exista un texto que mostrar-->
+        <div class="notext">
           <img src="recursos/Muñeco.png" alt="imagen del Muñeco" />
           <p class="titulo">Ningún mensaje fue encontrado</p>
           <p class="subtitulo">
             ingesa el texto que deseas encriptar o desencriptar
           </p>
         </div>
-        <div class="notext">
+        <!--Elementos mostrados cuando exista un texto que mostrar-->
+        <div class="text">
           <textarea
             name="tablonmensajes"
             id="tablonmensajes"
             cols="30"
             rows="10"
           ></textarea>
+          <!--boton para copiar el contenido del text area, del div tablon-->
           <button class="botoncopiar">Copiar</button>
         </div>
       </div>
     </main>
+    <!--pendiente de estilo-->
     <footer>
       <p>Encriptador de Sebas</p>
     </footer>
   </body>
+  <!--script area-->
+  <script>
+    function encriptarMensaje() {
+      var mensaje = document.querySelector("#mensaje").value;
+      var mensajeCifrado = mensaje
+        .replace(/e/g, "enter")
+        .replace(/i/g, "imes")
+        .replace(/a/g, "ai")
+        .replace(/o/g, "ober")
+        .replace(/u/g, "ufat");
+      console.log(mensaje);
+      console.log(mensajeCifrado);
+      document.querySelector("#tablonmensajes").value = mensajeCifrado;
+    }
+
+    function desencriptarMensaje() {
+      var mensaje = document.querySelector("#mensaje").value;
+      var mensajeCifrado = mensaje
+        .replace(/enter/g, "e")
+        .replace(/imes/g, "i")
+        .replace(/ai/g, "a")
+        .replace(/ober/g, "o")
+        .replace(/ufat/g, "u");
+      console.log(mensaje);
+      console.log(mensajeCifrado);
+      document.querySelector("#tablonmensajes").value = mensajeCifrado;
+    }
+  </script>
 </html>
