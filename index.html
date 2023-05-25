@@ -57,7 +57,7 @@
       <!--Tablon donde se mostraran los mensajes-->
       <div class="tablon">
         <!--Elementos visibles cuando no exista un texto que mostrar-->
-        <div class="notext">
+        <div id="notext">
           <img src="recursos/Muñeco.png" alt="imagen del Muñeco" />
           <p class="titulo">Ningún mensaje fue encontrado</p>
           <p class="subtitulo">
@@ -65,7 +65,7 @@
           </p>
         </div>
         <!--Elementos mostrados cuando exista un texto que mostrar-->
-        <div class="text">
+        <div id="text">
           <textarea
             name="tablonmensajes"
             id="tablonmensajes"
@@ -73,13 +73,15 @@
             rows="10"
           ></textarea>
           <!--boton para copiar el contenido del text area, del div tablon-->
-          <button class="botoncopiar">Copiar</button>
+          <button class="botoncopiar" type="button" onclick="copiarOutput()">
+            Copiar
+          </button>
         </div>
       </div>
     </main>
     <!--pendiente de estilo-->
     <footer>
-      <p>Encriptador de Sebas</p>
+      <p>Encriptador de Sebastian Gutiérrez García</p>
     </footer>
   </body>
   <!--script area-->
@@ -92,9 +94,8 @@
         .replace(/a/g, "ai")
         .replace(/o/g, "ober")
         .replace(/u/g, "ufat");
-      console.log(mensaje);
-      console.log(mensajeCifrado);
       document.querySelector("#tablonmensajes").value = mensajeCifrado;
+      visibiliti();
     }
 
     function desencriptarMensaje() {
@@ -105,9 +106,27 @@
         .replace(/ai/g, "a")
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
-      console.log(mensaje);
-      console.log(mensajeCifrado);
       document.querySelector("#tablonmensajes").value = mensajeCifrado;
+      visibiliti();
+    }
+
+    function copiarOutput() {
+      var copiar = document.querySelector("#tablonmensajes").value;
+      navigator.clipboard.writeText(copiar);
+      alert("El mensaje encriptado fue copiado");
+      document.querySelector("#tablonmensajes").value = null;
+      visibiliti();
+    }
+
+    function visibiliti() {
+      var vis = document.querySelector("#tablonmensajes").value;
+      if (vis.length > 0) {
+        document.querySelector("#text").style.display = "block";
+        document.querySelector("#notext").style.display = "none";
+      } else {
+        document.querySelector("#text").style.display = "none";
+        document.querySelector("#notext").style.display = "block";
+      }
     }
   </script>
 </html>

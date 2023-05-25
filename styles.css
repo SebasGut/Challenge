@@ -70,13 +70,14 @@ main div{
 }
 
 
-.notext{
+#notext{
+    display: block;
+}
+
+#text{
     display: none;
 }
 
-.text{
-    display: block;
-}
 .botoncopiar{
     box-sizing: border-box;
     width: 336px;
@@ -90,7 +91,6 @@ main div{
 #mensaje{
     border: none;
     background-color:#F3F5FC;
-    text-transform: lowercase;
     outline: none;
 
     resize: none;
@@ -152,3 +152,6 @@ footer{
     font-size: 30px;
 }
 
+footer p{
+    margin-top: 10px;
+}
