@@ -12,6 +12,7 @@ body{
 
 main{
     width: 940px;
+    height:fit-content;
     display: inline;
 }
 main div{
