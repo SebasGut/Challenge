@@ -22,15 +22,15 @@ main div{
 }
 
 .encriptador{
-    margin-left: 200px;
     margin-top: 80px;
-    width: 800px;
+    width: 60%;
     height: 680px;
     vertical-align: top;
 }
 
 .tablonArea{
     text-align: center;
+    width: 35%;
 }
 
 .tablon{
