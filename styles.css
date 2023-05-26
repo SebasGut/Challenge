@@ -99,13 +99,14 @@ main div{
 }
 
 #mensaje{
+    padding-left: 200px;
     border: none;
     background-color:#F3F5FC;
     outline: none;
 
     resize: none;
     margin: 80px auto 0 auto;
-    width:685px;
+    width: 80%;
     height: 420px;
 
     font-family: 'Inter';
@@ -122,11 +123,12 @@ main div{
 }
 
 .aviso{
-    margin: 10px auto;
+    margin-top: 10px;
+    margin-left: 200px;
 }
 
 .botones{
-   margin: 0 auto;
+   margin-left: 200px;
    display: block;
 }
 .encriptar{
