@@ -55,28 +55,31 @@
           </div>
         </form>
       </div>
-      <!--Tablon donde se mostraran los mensajes-->
-      <div class="tablon">
-        <!--Elementos visibles cuando no exista un texto que mostrar-->
-        <div id="notext">
-          <img src="recursos/Muñeco.png" alt="imagen del Muñeco" />
-          <p class="titulo">Ningún mensaje fue encontrado</p>
-          <p class="subtitulo">
-            ingesa el texto que deseas encriptar o desencriptar
-          </p>
-        </div>
-        <!--Elementos mostrados cuando exista un texto que mostrar-->
-        <div id="text">
-          <textarea
-            name="tablonmensajes"
-            id="tablonmensajes"
-            cols="30"
-            rows="10"
-          ></textarea>
-          <!--boton para copiar el contenido del text area, del div tablon-->
-          <button class="botoncopiar" type="button" onclick="copiarOutput()">
-            Copiar
-          </button>
+      
+      <div class="tablonArea">
+        <!--Tablon donde se mostraran los mensajes-->
+        <div class="tablon">
+          <!--Elementos visibles cuando no exista un texto que mostrar-->
+          <div id="notext">
+            <img src="recursos/Muñeco.png" alt="imagen del Muñeco" />
+            <p class="titulo">Ningún mensaje fue encontrado</p>
+            <p class="subtitulo">
+              ingesa el texto que deseas encriptar o desencriptar
+            </p>
+          </div>
+          <!--Elementos mostrados cuando exista un texto que mostrar-->
+          <div id="text">
+            <textarea
+              name="tablonmensajes"
+              id="tablonmensajes"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <!--boton para copiar el contenido del text area, del div tablon-->
+            <button class="botoncopiar" type="button" onclick="copiarOutput()">
+              Copiar
+            </button>
+          </div>
         </div>
       </div>
     </main>

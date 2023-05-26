@@ -4,7 +4,9 @@ body{
 }
 
 .logo{
-    margin: 40px 0 0 40px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
     width: 120px;
     height: 48px;
    
@@ -20,16 +22,21 @@ main div{
 }
 
 .encriptador{
-    width: 60%;
-    height: 780px;
+    margin-left: 200px;
+    margin-top: 80px;
+    width: 800px;
+    height: 680px;
     vertical-align: top;
-    margin-bottom: 30px;
+}
+
+.tablonArea{
+    text-align: center;
 }
 
 .tablon{
     
     width: 400px;
-    height: 780px;
+    height: 680px;
     margin: 20px auto;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -39,7 +46,7 @@ main div{
 .tablon img{
     width: 336px;
     height: 304px;
-    margin: 180px 0 0 32px;
+    margin: 120px 0 0 32px;
 }
 
 .tablon .titulo{
@@ -65,7 +72,7 @@ main div{
  #tablonmensajes{
     margin: 20px 0 0 35px;
     width: 320px;
-    height: 790px;
+    height: 550px;
     border: none;
     resize: none;
     outline: none;
@@ -85,7 +92,7 @@ main div{
     box-sizing: border-box;
     width: 336px;
     height: 67px;
-    margin-left: 35px;
+    margin: auto;
 
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -97,9 +104,9 @@ main div{
     outline: none;
 
     resize: none;
-    margin: 80px 0 0 200px;
+    margin: 80px auto 0 auto;
     width:685px;
-    height: 520px;
+    height: 420px;
 
     font-family: 'Inter';
     font-style: normal;
@@ -115,11 +122,12 @@ main div{
 }
 
 .aviso{
-  margin: 3px 0 16px 200px;
+    margin: 10px auto;
 }
 
 .botones{
-   margin-left: 200px;
+   margin: 0 auto;
+   display: block;
 }
 .encriptar{
     width: 328px;
@@ -157,4 +165,38 @@ footer{
 
 footer p{
     margin-top: 10px;
+}
+
+@media screen and (max-width:1300px){
+  
+  footer{
+    margin-top: 150px;
+  }
+
+  .tablon{
+    margin: auto auto;
+  }
+
+  .botones{
+    display:contents;
+  }
+.encriptar,.desencriptar{
+    margin:0 0 15px 0;
+}
+  main .tablonArea{
+   width:100%;
+   align-items: center;
+  }
+  
+  #mensaje {
+    width: 80%;
+    height: 100px;
+  }
+  .encriptador{
+    width: 100%;
+    height: fit-content;
+    margin: 80px auto 10px auto;
+    text-align: center;
+    
+  }
 }
