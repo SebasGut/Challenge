@@ -177,7 +177,7 @@ footer p{
 
   .tablon{
     margin: auto auto;
-    width: auto;
+    width: 400px;
     height: auto;
   }
 
@@ -211,15 +211,10 @@ footer p{
     text-align: center;
     
   }
-  .tablon{
-    
-    width: auto;
-   
-}
   
   #tablonmensajes{
     margin: 20px auto 0 auto;
-    width: auto;
+    width: 360px;
     height: auto;
     border: none;
     resize: none;
