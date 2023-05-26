@@ -20,7 +20,7 @@ main div{
 
 .encriptador{
     width: 60%;
-    height: auto;
+    height: 780px;
     vertical-align: top;
     margin-bottom: 30px;
 }
@@ -28,7 +28,7 @@ main div{
 .tablon{
     
     width: 400px;
-    height: 944px;
+    height: 780px;
     margin: 20px auto;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -38,9 +38,7 @@ main div{
 .tablon img{
     width: 336px;
     height: 304px;
-    top: 283px;
-    left: 32px;
-    margin: 283px 0 0 32px;
+    margin: 180px 0 0 32px;
 }
 
 .tablon .titulo{
@@ -100,7 +98,7 @@ main div{
     resize: none;
     margin: 80px 0 0 200px;
     width:685px;
-    height: 680px;
+    height: 520px;
 
     font-family: 'Inter';
     font-style: normal;
