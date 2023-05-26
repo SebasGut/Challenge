@@ -179,10 +179,8 @@ footer p{
     margin: auto auto;
   }
 
-  .botones{
-    display:contents;
-  }
 .encriptar,.desencriptar{
+    width: 128px;
     margin:0 0 15px 0;
 }
   main .tablonArea{
@@ -191,6 +189,7 @@ footer p{
   }
   
   #mensaje {
+    padding: auto;
     width: 80%;
     height: 100px;
   }
